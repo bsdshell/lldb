@@ -1,13 +1,13 @@
+# ~/.lldbinit -> github/lldb/dot_lldbinit.txt
+#
+#script sys.path[:0] = "/Users/cat/myfile/github/lldb/logging.py" # This is the directory I keep my scripts in.
+#script import logging as l # A module ~/dev/lldbpy/logging.py
+#command script import /Users/cat/myfile/github/lldb/logging.py
+
 script import os, sys
 script import logging as l 
 
-#script sys.path[:0] = "/Users/cat/myfile/github/lldb/logging.py" # This is the directory I keep my scripts in.
-#script import logging as l # A module ~/dev/lldbpy/logging.py
-
-#command script import /Users/cat/myfile/github/lldb/logging.py
-
 command alias pii print (int)
-
 command alias sc script # Lets you call sc instead of writing out script.
 command alias allv script print lldb.frame.get_all_variables()  
 command alias chc e self.view.backgroundColor = [UIColor greenColor]
